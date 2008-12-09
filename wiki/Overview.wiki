@@ -16,7 +16,7 @@ Version 2 was written by Sylvain Gizard ( Engineering student, Telecommunication
 
 = Download =
 
-Full download distributions contains source code, compiled classes, jar file, javadoc files, some compiled plugins and their manifestations and configuration files.
+Full download distributions contains source code, compiled classes, jar file, javadoc files, some compiled plugins and their manifestations, bootcode and configuration files.
 
 Source files can be downloaded via svn.
 

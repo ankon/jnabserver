@@ -22,7 +22,7 @@ Source files can be downloaded via svn.
 
 = Usage = 
 
-Version 2 of jNabServer does not currently have documentation. Version 1 and all related documentation can be acccessed in: http://www.cs.uta.fi/hci/spi/jnabserver/
+Version 2 of jNabServer does not currently have documentation. Version 1 and all related documentation can be acccessed in: http://www.sis.uta.fi/~spi/jnabserver/
 
 == Quickstart ==
 

@@ -391,9 +391,9 @@ public class ServerConfigurationServer extends Thread
 	    Bunny bunny = this.microServer.getBurrow().getBunny(bunnySerial);
 	    AbstractPlugin plugin = bunny.getPluginByName(pluginName);
 	    if (plugin.setParameter(paramName, paramValue))
-		ps.println("KO (no such parameter)");
-	    else
 		ps.println("OK");
+	    else
+		ps.println("KO (no such parameter)");
 	}
 	catch (NoSuchBunnyException e)
 	{

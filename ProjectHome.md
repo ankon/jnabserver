@@ -1,0 +1,1 @@
+jNabServer replaces Violet platform with a Java based server that can be run locally on a server machine or even on some integrated platforms. Developers can write plugin components, which handle requests sent by Nabaztag (button input, RFID input, audio recording etc.) and send back commands to play audio, move ears and flash the lights.

@@ -218,7 +218,7 @@ public class ServerConfigurationServer extends Thread
 	    }
 
 	    // Client shutdown command
-	    if (cmd.equals("SHUTDOWN client"))
+	    if (cmd.equals("SHUTDOWN client") || cmd.equals("QUIT") || cmd.equals("EXIT"))
 	    {
 		return CLIENT_SHUTDOWN;
 	    }
@@ -261,10 +261,26 @@ public class ServerConfigurationServer extends Thread
 	    {
 		return this.handleSaveBunnyCommand(cmd.substring(cmd.indexOf(':') + 1).trim(), ps);
 	    }
-
+	    else if (cmd.equals("HELP"))
+	    {
+		ps.println("Available commands:");
+		ps.println("  SHUTDOWN server                                   - Shuts down the server");
+		ps.println("  SHUTDOWN client / QUIT / EXIT                     - Disconnects the client from the server");
+		ps.println("  INFO server                                       - Display server information");
+		ps.println("  INFO bunnies                                      - List of bunnies");
+		ps.println("  INFO bunny: <mac>                                 - Info for specific bunny");
+		ps.println("  SET bunny name: <mac> <name>                      - Update bunny name");
+		ps.println("  SET bunny ping interval: <mac> <interval>         - Change ping interval");
+		ps.println("  ADD bunny plugin: <mac> <plugin-name>             - Add plugin for bunny");
+		ps.println("  SET bunny plugin parameter:");
+		ps.println("    <mac> <plugin-name> <param-name> <param-value>  - Update plugin parameter for bunny");
+		ps.println("  REMOVE bunny plugin: <mac> <plugin-name>          - Remove plugin from bunny");
+		ps.println("  SAVE bunny: <mac>                                 - Save bunny settings");
+		return KEEP_ALIVE;
+	    }
 	    else
 	    {
-		ps.println("KO (unsupported command)");
+		ps.println("KO (unsupported command), try \"HELP\"");
 		return KEEP_ALIVE;
 	    }
 	}
